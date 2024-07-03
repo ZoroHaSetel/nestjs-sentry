@@ -9,7 +9,7 @@ import { UuidModule } from 'nestjs-uuid';
 @Module({
   imports: [
     ConfigModule.forRoot(),
-    MongooseModule.forRoot(process.env.CONNECTION_STRING),
+    MongooseModule.forRoot("mongodb://localhost:27017"),
     MongooseModule.forFeature([{ name: Basic.name, schema: BasicSchema }]),
     UuidModule,
   ],
